@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./src/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="./src/css/styles.css">
+    <title>User List</title>
+</head>
+<body>
+    <header class="header">
+        <img src="./src/images/user-list-logo2.png" alt="Imagem do logo" class="logo">
+    </header>
+
+    <main class="login-container">
+        <form id="login-form">
+            <h1>Welcome Stranger!</h1>
+            <p>User your email to access UserList:</p>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+            <p>Don't have an account? <a href="./src/html/register-form.html">Register now</a></p>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 User List. All rights reserved.</p>
+        <p>Developed by Ricardo Vitor Castilho.</p>
+    </footer>
+    <script src="./src/js/login-script.js"></script>
+</body>
+</html>
