@@ -22,13 +22,13 @@
     <main class="register-container">
         <form id="register-form">
             <h1>Create Your Account Stranger!</h1>
-            <p>Fill out the form below to register</p>
+            <p>Fill out the form and register to access UserList</p>
 
             <div class="input-group">
                 <label for="name">Name</label>
                 <div class="input-wrapper">
                     <i class="fas fa-user"></i>
-                    <input type="text" id="name" name="name" placeholder="Create your user name" required>
+                    <input type="text" id="name" name="name" placeholder="Create your user name">
                 </div>
             </div>
             
@@ -36,23 +36,23 @@
                 <label for="email">Email</label>
                 <div class="input-wrapper">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" name="email" placeholder="Insert your email Address" required>
+                    <input type="email" id="email" name="email" placeholder="Insert your email Address">
                 </div>
             </div>
 
             <div class="input-group">
                 <label for="password">Password</label>
                 <div class="input-wrapper">
-                    <i class="fas fa-lock"></i>
                     <input type="password" id="password" name="password" placeholder="Create your password" required>
+                    <i class="fas fa-eye" id="toggle-password" onclick="togglePassword()"></i>
                 </div>
             </div>
 
             <div class="input-group">
                 <label for="confirm-password">Confirm your password</label>
                 <div class="input-wrapper">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+                    <i class="fas fa-eye" id="toggle-confirm-password" onclick="toggleConfirmPassword()"></i>
                 </div>
             </div>
 

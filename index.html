@@ -19,20 +19,20 @@
     <main class="login-container">
         <form id="login-form">
             <h1>Welcome Stranger!</h1>
-            <p>User your email to access UserList:</p>
+            <p>User your email to access UserList</p>
             <div class="input-group">
                 <label for="email">Email</label>
                 <div class="input-wrapper">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Insert your email">
                 </div>
             </div>
 
             <div class="input-group">
                 <label for="password">Password</label>
                 <div class="input-wrapper">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" placeholder="Create your password" required>
+                    <i class="fas fa-eye" id="toggle-password" onclick="togglePassword()"></i>
                 </div>
             </div>
 
