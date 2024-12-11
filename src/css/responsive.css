@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+    body {
+        background: #181818 ;
+        color: #fff;
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+    .login-container {
+        margin-top: 150px;
+        padding: 20px;
+    }
+
+    .header {
+        padding: 5px 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .header .logo {
+        width: 100px;
+    }
+
+    .input-group input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 0.9rem; 
+        padding: 8px;
+    }
+}
