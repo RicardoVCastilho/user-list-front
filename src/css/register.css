@@ -1,0 +1,36 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url('../images/mercador-background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.register-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.register-container:hover {
+    background-color: rgba(0, 0, 0, 0.9); 
+    transform: scale(1.02); 
+}
+
+#register-form h1 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+#register-form p {
+    margin-bottom: 15px;
+}
