@@ -30,7 +30,7 @@ document.getElementById('login-form').addEventListener('submit', function (event
         return response.json();
     })
     .then(data => {
-        window.location.href = '/src/html/user-dashboard.html'
+        window.location.href = 'user-dashboard.html'
     })
     .catch(error => {
         console.error('Erro:', error);

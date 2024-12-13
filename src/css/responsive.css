@@ -1,32 +1,140 @@
+/* Global Styles for smaller screens */
 @media (max-width: 768px) {
     body {
-        background: #181818 ;
-        color: #fff;
-        height: 100%;
-        justify-content: flex-start;
+        font-size: 14px;
+        background-size: 50px 50px; /* Reduz o tamanho do padrão de fundo para telas menores */
     }
 
-    .login-container {
-        margin-top: 150px;
-        padding: 20px;
+    header {
+        height: 120px; /* Ajusta o tamanho do cabeçalho */
     }
 
-    .header {
-        padding: 5px 20px;
-        background-color: rgba(0, 0, 0, 0.8);
+    .logo {
+        max-height: 100px;
     }
 
-    .header .logo {
-        width: 100px;
+    .input-group {
+        font-size: 0.8rem; /* Reduz o tamanho da fonte do input */
     }
 
     .input-group input {
-        font-size: 0.9rem;
-        padding: 8px;
+        padding: 0.5rem 1rem; /* Ajusta o padding dos inputs */
     }
 
     .btn {
-        font-size: 0.9rem; 
-        padding: 8px;
+        padding: 0.65rem; /* Ajusta o padding do botão */
+    }
+
+    footer {
+        margin-top: 3rem; /* Dá mais espaço entre o conteúdo e o rodapé */
+    }
+
+    .social-links {
+        font-size: 1.5rem; /* Ajusta o tamanho dos ícones sociais */
     }
 }
+
+/* For very small devices like phones in portrait */
+@media (max-width: 480px) {
+    .login-container, .register-container {
+        padding: 1rem;
+    }
+
+    .login-form, .register-form {
+        width: 100%; /* Formulário ocupa toda a largura disponível */
+        padding: 1rem; /* Ajuste de padding */
+    }
+
+    .login-form h1, .register-form h1 {
+        font-size: 1.2rem; /* Ajusta o título */
+    }
+
+    .btn {
+        width: 100%; /* O botão ocupa toda a largura */
+    }
+
+    .social-links {
+        font-size: 1.2rem; /* Ícones sociais menores */
+    }
+}
+
+/* Login Styles for smaller screens */
+@media (max-width: 768px) {
+    .login-form {
+        width: 80%; /* Reduz o tamanho do formulário em telas menores */
+        margin-top: 1rem; /* Menos margem superior */
+    }
+
+    .describe-userlist {
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
+
+/* For very small devices like phones in portrait */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1rem; /* Reduz o padding da container */
+    }
+
+    .login-form {
+        width: 100%; /* O formulário ocupa toda a largura */
+        padding: 1rem; /* Ajuste de padding */
+    }
+
+    .login-form h1 {
+        font-size: 1.2rem; /* Tamanho menor do título */
+    }
+
+    .input-group input {
+        padding: 0.5rem 0.8rem; /* Ajuste do padding dos campos */
+    }
+
+    .btn {
+        padding: 0.75rem; /* Botão ajustado */
+    }
+
+    .social-links {
+        font-size: 1.2rem; /* Ajuste nos ícones sociais */
+    }
+}
+
+/* Register Styles for smaller screens */
+@media (max-width: 768px) {
+    .register-form {
+        width: 80%; /* Formulário menor em telas menores */
+        margin-top: 1rem;
+    }
+
+    .describe-form {
+        font-size: 0.8rem;
+    }
+}
+
+/* For very small devices like phones in portrait */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 1rem;
+    }
+
+    .register-form {
+        width: 100%; /* Ocupa toda a largura em telas pequenas */
+        padding: 1rem;
+    }
+
+    .register-form h1 {
+        font-size: 1.2rem; /* Ajuste no título */
+    }
+
+    .input-group input {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .btn {
+        padding: 0.75rem;
+    }
+
+    .signin {
+        font-size: 0.8rem; /* Ajuste no tamanho da fonte */
+    }
+}
+

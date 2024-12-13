@@ -7,22 +7,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/globals.css">
-    <link rel="stylesheet" href="../css/register.css">
-    <link rel="stylesheet" href="../css/responsive-register.css">
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="stylesheet" href="./src/css/register.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
     <title>UserList - Register</title>
 </head>
 
 <body>
-    <header class="header">
-        <img src="../images/user-list-logo2.png" alt="Logo UserList" class="logo">
+    <header class="logo">
+        <img src="./src/images/user-list-logo2.png" alt="Logo UserList" class="logo">
     </header>
 
     <main class="register-container">
-        <form id="register-form">
+        <form id="register-form" class="register-form">
             <h1>Create Your Account Stranger!</h1>
-            <p>Fill out the form and register to access UserList</p>
+            <p class="describe-form">Fill out the form and register to access UserList</p>
 
             <div class="input-group">
                 <label for="name">Name</label>
@@ -31,12 +30,12 @@
                     <input type="text" id="name" name="name" placeholder="Create your user name">
                 </div>
             </div>
-            
+
             <div class="input-group">
                 <label for="email">Email</label>
                 <div class="input-wrapper">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" name="email" placeholder="Insert your email Address">
+                    <input type="email" id="email" name="email" placeholder="Enter your email Address">
                 </div>
             </div>
 
@@ -49,15 +48,17 @@
             </div>
 
             <div class="input-group">
-                <label for="confirm-password">Confirm your password</label>
+                <label for="password">Password</label>
                 <div class="input-wrapper">
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
-                    <i class="fas fa-eye" id="toggle-confirm-password" onclick="toggleConfirmPassword()"></i>
+                    <input type="password" id="password" name="password" placeholder="Confirm your password" required>
+                    <i class="fas fa-eye" id="toggle-password" onclick="togglePassword()"></i>
                 </div>
             </div>
 
             <button type="submit" class="btn">Register</button>
-            <p>Already have an account? <a href="/index.html">Login</a></p>
+            <p class="signin">
+                Already have an account? <a href="./index.html">Login</a>
+            </p>
         </form>
     </main>
 
@@ -65,7 +66,7 @@
         <p>&copy; 2024 User List. All rights reserved.</p>
         <p>Developed by Ricardo Vitor Castilho.</p>
     </footer>
-    <script src="../js/resgister-script.js"></script>
+    <script src="../js/resgisterScript.js"></script>
 </body>
 
 </html>

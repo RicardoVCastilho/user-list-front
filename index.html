@@ -1,50 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./src/images/favicon.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/globals.css">
-    <link rel="stylesheet" href="./src/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>UserList - Login</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/global.css">
+    <link rel="stylesheet" href="./src/css/login.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
 </head>
+
 <body>
-    <header class="header">
-        <img src="./src/images/user-list-logo2.png" alt="Imagem do logo" class="logo">
+
+    <header class="logo">
+        <img src="./src/images/user-list-logo2.png" alt="Logo" class="logo">
     </header>
 
     <main class="login-container">
-        <form id="login-form">
+
+        <form id="login-form" class="login-form">
             <h1>Welcome Stranger!</h1>
-            <p>User your email to access UserList</p>
+            <p class="describe-userlist">User your email to access UserList</p>
+
             <div class="input-group">
                 <label for="email">Email</label>
                 <div class="input-wrapper">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" name="email" placeholder="Insert your email">
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
                 </div>
             </div>
 
             <div class="input-group">
                 <label for="password">Password</label>
                 <div class="input-wrapper">
-                    <input type="password" id="password" name="password" placeholder="Create your password" required>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
                     <i class="fas fa-eye" id="toggle-password" onclick="togglePassword()"></i>
                 </div>
             </div>
 
             <button type="submit" class="btn">Login</button>
-            <p>Don't have an account? <a href="./src/html/register-form.html">Register now</a></p>
+            <p class="signup">Don't have an account?
+                <a rel="noopener noreferrer" href="./register-form.html" class="">Register now</a>
+            </p>
         </form>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 User List. All rights reserved.</p>
-        <p>Developed by Ricardo Vitor Castilho.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 User List. All rights reserved.</p>
+            <p>Developed by Ricardo Vitor Castilho.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ricardo-vitor-castilho-b60039241/" target="_blank"
+                    class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/RicardoVCastilho" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
     </footer>
-    <script src="./src/js/login-script.js"></script>
+
+    </div>
+
+    <script src="./src/js/loginScript.js"></script>
+    <script src="./src/js/togglePassword.js"></script>
 </body>
+
 </html>
