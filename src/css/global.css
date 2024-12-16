@@ -82,14 +82,12 @@ header .logo:hover {
     border-color: rgba(167, 139, 250);
   }
 
-/* Estilo para os ícones de senha (registro e login) */
 #toggle-password, #toggle-login-password, #toggle-confirm-password {
   cursor: pointer;
   color: var(--icon-color, #888);
   transition: color 0.3s;
 }
 
-/* Hover nos ícones (registro, login e confirmação) */
 #toggle-password:hover, #toggle-login-password:hover, #toggle-confirm-password:hover {
   color: var(--hover-color, #555);
 }

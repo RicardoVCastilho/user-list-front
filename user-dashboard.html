@@ -4,27 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Usuários</title>
+    <link rel="icon" href="./src/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/dashboard.css">
+    <link rel="stylesheet" href="./src/css/responsive-dashboard.css">
+    <title>The Userlist - Dashboard</title>
 </head>
 
 <body>
-    <h1>Lista de Usuários</h1>
+    <header class="dashboard-header">
+        <img src="./src/images/user-list-logo2.png" alt="userlist logo" class="logo">
 
-    <table id="users-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    <a href="./index.html">Logout</a></p>
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
 
+        <nav class="nav-bar">
+            <a href="#main-section" class="nav-link">Main</a>
+            <a href="#user-list" class="nav-link">User list</a>
+            <a href="#footer" class="nav-link">Author</a>
+            <button id="logout-button" class="btn-logout">Logout</button>
+        </nav>
+    </header>
 
-    <script src="./src/js/userDashboard.js"></script> 
+    <main class="dashboard-main">
+        <section id="main-section" class="content-section">
+            <h1>Welcome to Userlist Dashboard, Stranger!</h1>
+            <p>Este projeto consiste em um layout frontend integrado a uma API de autenticação de usuários com JWT. Ele
+                permite realizar login e cadastro através dos métodos POST /login e POST /register. Além disso, é
+                possível executar as operações básicas de CRUD em uma lista de usuários cadastrados, oferecendo uma
+                interface intuitiva para gerenciar quem tem acesso ao sistema.</p>
+        </section>
+
+        <section id="user-list" class="content-user-list">
+            <h2>User List</h2>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list-body">
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>johndoe@example.com</td>
+                        <td>
+                            <button class="btn-edit" title="Editar">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="btn-delete" title="Excluir">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 User List. All rights reserved.</p>
+            <p>Developed by Ricardo Vitor Castilho.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ricardo-vitor-castilho-b60039241/" target="_blank"
+                    class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/RicardoVCastilho" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./src/js/userDashboard.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,205 @@
+:root {
+    --background-color: #313131;
+    --background-color-img: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+    --section-color: rgba(17, 24, 39, 1);
+    --text-color: rgba(243, 244, 246, 1);
+    --label-color: rgba(156, 163, 175, 1);
+    --button-color: rgba(167, 139, 250);
+  }
+
+  body {
+    background: var(--background-color);
+    background-image: var(--background-color-img);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 2rem;
+    background: rgba(17, 24, 39, 0.6);
+    position: relative;
+
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    position: relative; /* Necessário para ajustar a posição do hambúrguer abaixo */
+    cursor: pointer;
+}
+
+/* Ajustes no hambúrguer */
+header .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute; /* Coloca o hambúrguer abaixo do logo */
+    top: 100%; /* Coloca o menu hambúrguer logo abaixo do logo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste fino para garantir que o ícone fique exatamente centralizado */
+}
+
+header .logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+header .hamburger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--text-color);
+    border-radius: 10px;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background: var(--button-color);
+    color: var(--section-color);
+    border-radius: 5px;
+}
+
+.btn-logout {
+    background: var(--button-color);
+    color: var(--section-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-logout:hover {
+    background: #7c57e2;
+}
+
+.dashboard-main {
+    padding: 2rem;
+}
+
+.content-section {
+    margin-bottom: 2rem;
+    background: var(--section-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.content-section h1, .content-user-list h2 {
+    text-align: center; 
+    border-bottom: 1px solid var(--label-color);
+    margin-bottom: 2.5rem;
+    opacity: 0.6; 
+}
+
+
+.content-section p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+.content-user-list {
+    background: var(--section-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.user-table th, .user-table td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid var(--label-color);
+}
+
+.user-table th {
+    background: var(--button-color);
+    color: var(--section-color);
+}
+
+.user-table td {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.user-table td button {
+    margin-right: 25px;
+}
+
+.user-table td button:last-child {
+    margin-right: 0; 
+}
+
+
+.user-table .btn-edit, .user-table .btn-delete {
+    background: transparent;
+    border: none;
+    color: var(--button-color);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.user-table .btn-edit:hover {
+    color: var(--text-color);
+  }
+  
+  .user-table .btn-delete:hover {
+    color: #e74c3c;
+  }
+
+  footer {
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 10px;
+    position: relative;
+    width: 100%;
+    margin-top: 135px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #1e90ff;
+    transform: scale(1.1);
