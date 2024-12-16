@@ -11,8 +11,8 @@
     background-color: var(--form-color);
     padding: 2rem;
     color: var(--text-color);
-    margin-top: 0.75rem;
-  }
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
 
   .register-form h1 {
     text-align: center;
