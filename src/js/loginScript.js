@@ -1,6 +1,15 @@
-document.getElementById('login-form').addEventListener('submit', function (event) {
-    event.preventDefault();
+const loadingOverlay = document.getElementById('loading');
 
+function showLoading() {
+    loadingOverlay.style.display = 'flex';
+}
+
+function hideLoading() {
+    loadingOverlay.style.display = 'none';
+}
+
+document.getElementById('login-form').addEventListener('submit', function (event) {
+    event.preventDefault(); 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
@@ -13,6 +22,8 @@ document.getElementById('login-form').addEventListener('submit', function (event
         email: email,
         password: password
     };
+
+    showLoading();
 
     fetch('https://api-login-z19r.onrender.com/auth/login', {
         method: 'POST',
@@ -30,10 +41,13 @@ document.getElementById('login-form').addEventListener('submit', function (event
         return response.json();
     })
     .then(data => {
-        window.location.href = 'user-dashboard.html'
+        window.location.href = 'user-dashboard.html';
     })
     .catch(error => {
         console.error('Erro:', error);
         alert('Erro: ' + error.message); 
+    })
+    .finally(() => {
+        hideLoading();
     });
 });

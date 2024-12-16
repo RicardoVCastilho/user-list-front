@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./src/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/global.css">
     <link rel="stylesheet" href="./src/css/register.css">
@@ -36,25 +36,26 @@
                 <label for="email">Email</label>
                 <div class="input-wrapper">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" name="email" placeholder="Enter your email Address">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
                 </div>
             </div>
 
             <div class="input-group">
                 <label for="password">Password</label>
                 <div class="input-wrapper">
-                    <input type="password" id="password" name="password" placeholder="Create your password" required>
+                    <input type="password" id="password" name="password" placeholder="Create your password">
                     <i class="fas fa-eye" id="toggle-password" onclick="togglePassword()"></i>
                 </div>
             </div>
-
+            
             <div class="input-group">
-                <label for="password">Password</label>
+                <label for="confirm-password">Confirm your password</label>
                 <div class="input-wrapper">
-                    <input type="password" id="password" name="password" placeholder="Confirm your password" required>
-                    <i class="fas fa-eye" id="toggle-password" onclick="togglePassword()"></i>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+                    <i class="fas fa-eye" id="toggle-confirm-password" onclick="toggleConfirmPassword()"></i>
                 </div>
             </div>
+            
 
             <button type="submit" class="btn">Register</button>
             <p class="signin">
@@ -79,7 +80,8 @@
         </div>
     </footer>
 
-    <script src="../js/resgisterScript.js"></script>
+    <script src="./src/js/togglePassword.js"></script>
+    <script src="./src/js/resgisterScript.js"></script>
 </body>
 
 </html>
