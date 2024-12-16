@@ -1,14 +1,11 @@
-/* Global Styles for smaller screens */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
         background-size: 50px 50px;
-        /* Reduz o tamanho do padrão de fundo para telas menores */
     }
 
     header {
         height: 120px;
-        /* Ajusta o tamanho do cabeçalho */
     }
 
     .logo {
@@ -17,12 +14,10 @@
 
     .input-group {
         font-size: 0.8rem;
-        /* Reduz o tamanho da fonte do input */
     }
 
     .input-group input {
         padding: 0.5rem 1rem;
-        /* Ajusta o padding dos inputs */
     }
 
     .input-wrapper {
@@ -33,35 +28,27 @@
 
     .input-wrapper i {
         font-size: 1rem;
-        /* Reduz o tamanho do ícone */
         left: 8px;
-        /* Ajusta a posição horizontal */
     }
 
     .input-group input {
         padding-left: 2rem;
-        /* Garante espaço suficiente para o ícone */
         font-size: 0.9rem;
-        /* Ajusta o tamanho da fonte no input */
     }
 
     .btn {
         padding: 0.65rem;
-        /* Ajusta o padding do botão */
     }
 
     footer {
         margin-top: 3rem;
-        /* Dá mais espaço entre o conteúdo e o rodapé */
     }
 
     .social-links {
         font-size: 1.5rem;
-        /* Ajusta o tamanho dos ícones sociais */
     }
 }
 
-/* For very small devices like phones in portrait */
 @media (max-width: 480px) {
 
     .login-container,
@@ -72,15 +59,12 @@
     .login-form,
     .register-form {
         width: 100%;
-        /* Formulário ocupa toda a largura disponível */
         padding: 1rem;
-        /* Ajuste de padding */
     }
 
     .login-form h1,
     .register-form h1 {
         font-size: 1.2rem;
-        /* Ajusta o título */
     }
 
     .input-wrapper {
@@ -91,25 +75,19 @@
 
     .input-wrapper i {
         font-size: 0.9rem;
-        /* Ícone ainda menor para telas bem pequenas */
         left: 6px;
-        /* Ajusta a posição horizontal */
     }
 
     .input-group input {
         padding-right: 1.8rem;
-        /* Reduz o espaço reservado para o ícone */
         font-size: 0.85rem;
-        /* Fonte ainda menor no input */
     }
 
     .btn {
         width: 100%;
-        /* O botão ocupa toda a largura */
     }
 
     .social-links {
         font-size: 1.2rem;
-        /* Ícones sociais menores */
     }
 }

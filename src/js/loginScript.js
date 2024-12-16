@@ -34,6 +34,6 @@ document.getElementById('login-form').addEventListener('submit', function (event
     })
     .catch(error => {
         console.error('Erro:', error);
-        alert('Erro: ' + error.message); // Exibe a mensagem de erro
+        alert('Erro: ' + error.message); 
     });
 });
