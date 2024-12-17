@@ -14,21 +14,40 @@
 </head>
 
 <body>
-    <header class="dashboard-header">
-        <img src="./src/images/user-list-logo2.png" alt="userlist logo" class="logo">
-
-        <div class="hamburger-menu" id="hamburgerMenu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-
+    <header>
         <nav class="nav-bar">
-            <a href="#main-section" class="nav-link">Main</a>
-            <a href="#user-list" class="nav-link">User list</a>
-            <a href="#footer" class="nav-link">Author</a>
-            <button id="logout-button" class="btn-logout">Logout</button>
+            <div class="logo">
+                <img src="./src/images/user-list-logo2.png" alt="userlist logo">
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#main-section" class="nav-link">Main</a></li>
+                    <li class="nav-item"><a href="#user-list" class="nav-link">User List</a></li>
+                    <li class="nav-item"><a href="#footer" class="nav-link">Author</a></li>
+                </ul>
+            </div>
+
+            <div class="logout-button">
+                <button><a href="#">Logout</a></button>
+            </div>
+
+            <div class="hamburguer-menu-icon">
+                <button onClick="showMenu()"><img class="icon" src="./src/images/menu_white_36dp.svg"></button>
+            </div>
         </nav>
+
+        <div class="hamburguer-menu">
+            <ul>
+                <li class="nav-item"><a href="#main-section" class="nav-link">Main</a></li>
+                <li class="nav-item"><a href="#user-list" class="nav-link">User List</a></li>
+                <li class="nav-item"><a href="#footer" class="nav-link">Author</a></li> 
+            </ul>
+
+            <div class="logout-button">
+                <button><a href="#">Logout</a></button>
+            </div>
+        </div>
     </header>
 
     <main class="dashboard-main">

@@ -1,123 +1,188 @@
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-
-    /* Ajuste do Header */
-    header.dashboard-header {
-        padding: 0.5rem 1rem; /* Menos padding */
-        flex-direction: column; /* Logo e nav ficam empilhados */
-        align-items: center;
-        gap: 1rem;
-    }
-
-    /* Logo */
-    header .logo {
-        width: 100px; /* Logo menor em telas pequenas */
-    }
-
-    .hamburger-menu {
-        display: flex; /* Torna o ícone visível */
-      }
-    
-      .nav-bar {
-        display: none; /* Esconde o menu por padrão */
-        width: 100%;
-        flex-direction: column;
-        gap: 1rem;
-        background-color: var(--section-color);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        padding: 1rem;
-        border-radius: 5px;
-      }
-    
-      .nav-bar.open {
-        display: flex; /* Torna o menu visível quando ativado */
-      }
-
-    /* Navegação */
+@media screen and (max-width: 730px) {
     .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .logout-button {
+        display: none;
+    }
+
+    .hamburguer-menu-icon {
+        display: flex;
+        align-items: center;
+        padding-right: 25px;
+    }
+
+    .hamburguer-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hamburguer-menu ul {
+        display: flex;
         flex-direction: column;
-        gap: 1rem;
-        margin-top: 1rem;
+        text-align: center;
+        padding-bottom: 1rem;
     }
 
-    .nav-link {
-        padding: 0.3rem 0.8rem;
-    }
-
-    /* Ajuste no botão de logout */
-    .btn-logout {
-        padding: 0.4rem 0.8rem;
-        font-size: 1rem;
-    }
-
-    /* Ajustes nas seções de conteúdo */
-    .content-section, .content-user-list {
-        padding: 1rem;
-    }
-
-    /* Títulos */
-    .content-section h1, .content-user-list h2 {
-        font-size: 1.5rem; /* Títulos menores */
-        margin-bottom: 1.5rem;
-    }
-
-    /* Alinhamento de texto */
-    .content-section p {
-        max-width: 100%;
-        font-size: 1rem;
-        padding: 0 1rem;
-    }
-
-    /* Tabela responsiva */
-    .user-table {
+    .hamburguer-menu .nav-item {
         display: block;
-        overflow-x: auto; /* Rolagem horizontal */
-        margin-top: 1rem;
+        padding-top: 1.2rem;
     }
 
-    .user-table th, .user-table td {
-        padding: 0.6rem; /* Menos padding nas células */
-        font-size: 0.9rem;
+    .hamburguer-menu .logout-button {
+        display: block;
+        padding: 1rem 2rem;
     }
 
-    .user-table td button {
-        margin-right: 15px; /* Menos espaço entre os botões */
+    .hamburguer-menu .logout-button button{
+        width: 100%;
     }
 
-    /* Ajuste no rodapé */
-    footer {
-        font-size: 0.9rem;
-        padding: 1rem;
-    }
-
-    .social-links {
-        gap: 10px;
-    }
+    .open {
+        display: block;
+    } 
 }
 
-/* Responsividade para telas maiores (tablets, etc.) */
-@media (max-width: 1024px) {
-
-    /* Ajustes no header */
-    header.dashboard-header {
-        padding: 1rem 1.5rem;
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .content-user-list {
+        padding: 1rem;
     }
 
-    .nav-bar {
-        gap: 1rem;
-    }
-
-    .content-section h1, .content-user-list h2 {
-        font-size: 1.8rem;
+    .user-table {
+        width: 100%;
+        table-layout: fixed;
     }
 
     .user-table th, .user-table td {
         padding: 0.7rem;
+        word-wrap: break-word;
     }
 
-    .btn-logout {
-        padding: 0.4rem 1rem;
+    .user-table td {
+        word-break: break-word;
     }
+}
+
+@media screen and (max-width: 720px) and (min-width: 540px) {
+    .content-user-list {
+        padding: 0.5rem;
+    }
+
+    .user-table {
+        font-size: 0.9rem;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 0.5rem;
+    }
+
+    .user-table td {
+        word-break: break-word;
+    }
+
+    .user-table td button {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .content-user-list {
+        padding: 0.3rem;
+    }
+
+    .user-table {
+        font-size: 0.8rem;
+    }
+
+    .user-table th, .user-table td {
+        padding: 0.3rem;
+    }
+
+    .user-table td button {
+        font-size: 0.7rem;
+        margin-right: 5px;
+    }
+
+    .user-table td {
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .logout-button {
+        display: none;
+    }
+
+    .hamburguer-menu-icon {
+        display: flex;
+        align-items: center;
+        padding-right: 25px;
+    }
+
+    .hamburguer-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hamburguer-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .hamburguer-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .hamburguer-menu .logout-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .hamburguer-menu .logout-button button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
+}
+
+.content-user-list {
+    overflow-x: auto;
+}
+
+.user-table {
+    min-width: 100%;
+    table-layout: auto;
+    border-spacing: 0;
+}
+
+.user-table th,
+.user-table td {
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.user-table td {
+    word-break: break-word;
 }

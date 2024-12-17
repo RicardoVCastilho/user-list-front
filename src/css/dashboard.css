@@ -16,53 +16,48 @@
     line-height: 1.6;
 }
 
-header.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.2rem 2rem;
-    background: rgba(17, 24, 39, 0.6);
-    position: relative;
-
-}
-
-.logo img {
-    width: 120px;
-    height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    position: relative; /* Necessário para ajustar a posição do hambúrguer abaixo */
-    cursor: pointer;
-}
-
-/* Ajustes no hambúrguer */
-header .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-    position: absolute; /* Coloca o hambúrguer abaixo do logo */
-    top: 100%; /* Coloca o menu hambúrguer logo abaixo do logo */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajuste fino para garantir que o ícone fique exatamente centralizado */
-}
-
-header .logo:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-}
-
-header .hamburger-menu .bar {
-    width: 100%;
-    height: 4px;
-    background-color: var(--text-color);
-    border-radius: 10px;
+header {
+    background-color: var(--section-color);
+    box-shadow: 0px 3px 10px var(--section-color);
 }
 
 .nav-bar {
     display: flex;
-    gap: 1.5rem;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    position: relative; /*Necessário para ajustar a posição do hambúrguer abaixo*/
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
 }
 
 .nav-link {
@@ -79,7 +74,13 @@ header .hamburger-menu .bar {
     border-radius: 5px;
 }
 
-.btn-logout {
+.logout-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-button button{
     background: var(--button-color);
     color: var(--section-color);
     border: none;
@@ -90,8 +91,23 @@ header .hamburger-menu .bar {
     transition: background 0.3s;
 }
 
-.btn-logout:hover {
+.logout-button button:hover {
     background: #7c57e2;
+}
+
+.logout-button button a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.hamburguer-menu-icon {
+    display: none;
+}
+
+.hamburguer-menu {
+    display: none;
 }
 
 .dashboard-main {
@@ -203,3 +219,4 @@ header .hamburger-menu .bar {
 .social-icon:hover {
     color: #1e90ff;
     transform: scale(1.1);
+}
