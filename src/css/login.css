@@ -46,6 +46,25 @@
     color: var(--label-color);
  }
 
+ .forgot-password {
+  display: flex;
+  justify-content: center;
+ }
+
+ #forgot-password-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--label-color);
+  text-decoration: none;
+ }
+
+ #forgot-password-link:hover {
+  text-decoration: underline;
+  color: var(--label-color);
+ }
+
  .loading-overlay {
   position: fixed;
   top: 0;

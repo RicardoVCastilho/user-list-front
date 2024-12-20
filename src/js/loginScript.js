@@ -41,6 +41,13 @@ document.getElementById('login-form').addEventListener('submit', function (event
         return response.json();
     })
     .then(data => {
+        if (data.token) {
+            localStorage.setItem('token', data.token);
+            console.log('Token salvo:', data.token);
+        } else {
+            throw new Error('Token não retornado pela API');
+        }
+
         window.location.href = 'user-dashboard.html';
     })
     .catch(error => {
