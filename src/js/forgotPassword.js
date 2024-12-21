@@ -11,16 +11,23 @@ document.getElementById('forgot-password-form').addEventListener('submit', async
     const data = { email };
 
     try {
-        const response = await fetch('https://api-login-z19r.onrender.com/forgot-password', {
+        const response = await fetch('https://api-login-z19r.onrender.com/auth/forgot-password', {
             method: 'POST',
-            headerd: {
+            headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data)
         });
 
         const result = await response.json();
-        document.getElementById('response-message').innerText = result.msg || 'Verifique seu email para obter o link de recuperação.';
+        const responseMessage = document.getElementById('response-message');
+        if(response.ok) {
+            responseMessage.innerText = result.msg || 'Senha alterada com sucesso.';
+            responseMessage.style.color = 'green';
+        } else {
+            responseMessage.innerText = result.msg || 'Erro ao alterar a senha.';
+            response.style.color = 'red';
+        }
     } catch(error) {
         console.error('Erro:', error);
         alert('Houve um erro ao enviar o link de recuperação.');
